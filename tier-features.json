@@ -1,0 +1,32 @@
+{
+  "_comment": "Canonical, machine-readable version of the tier feature matrix in Adobe-Commerce-EDS-Template-Architecture.md §2. Shared by every vertical. tierRank defines the superset order; a feature enabled at tier X is enabled for every tier ranked >= X.",
+  "tierRank": ["base", "simple", "medium", "complex"],
+  "defaultTier": "complex",
+  "features": {
+    "wishlist": { "minTier": "medium", "navPaths": ["/wishlist"] },
+    "saved-cart": { "minTier": "medium" },
+    "gift-cards": { "minTier": "medium" },
+    "coupons": { "minTier": "medium" },
+    "facets": { "minTier": "medium" },
+    "quick-view": { "minTier": "medium" },
+    "product-compare": { "minTier": "medium" },
+    "mega-menu": { "minTier": "medium" },
+    "site-search-customization": { "minTier": "medium" },
+    "stock-delivery-messaging": { "minTier": "medium" },
+    "transactional-emails": { "minTier": "medium" },
+    "sso": { "minTier": "complex", "navPaths": ["/customer/sso"] },
+    "addresses": { "minTier": "complex", "navPaths": ["/customer/address"] },
+    "saved-payments": { "minTier": "complex" },
+    "order-returns": { "minTier": "complex", "navPaths": ["/customer/returns", "/create-return"] },
+    "loyalty": { "minTier": "complex" },
+    "subscriptions": { "minTier": "complex" },
+    "guest-checkout": { "minTier": "complex" },
+    "multi-step-checkout": { "minTier": "complex" },
+    "store-pickup": { "minTier": "complex" },
+    "store-locator": { "minTier": "complex", "navPaths": ["/store-locator"] },
+    "recommendations": { "minTier": "base" },
+    "reviews-ratings": { "minTier": "base" },
+    "product-labels": { "minTier": "base" },
+    "analytics-tag-manager": { "minTier": "complex" }
+  }
+}

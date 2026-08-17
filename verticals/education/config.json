@@ -1,0 +1,46 @@
+{
+  "_comment": "Education vertical config override. At fork-per-client time this file is copied to the repo root as config.json (or pushed to the Configuration Service). commerce-* / headers / analytics values below point at Adobe's public Commerce demo sandbox (aemshop.net) so the drop-in wiring (catalog, cart, checkout) is genuinely live during development; swap them for the client's real Commerce instance before go-live.",
+  "public": {
+    "default": {
+      "vertical": "education",
+      "tier": "complex",
+      "commerce-core-endpoint": "https://www.aemshop.net/graphql",
+      "commerce-endpoint": "https://www.aemshop.net/cs-graphql",
+      "commerce-assets-enabled": true,
+      "headers": {
+        "all": {
+          "Store": "default"
+        },
+        "cs": {
+          "Magento-Store-Code": "main_website_store",
+          "Magento-Store-View-Code": "default",
+          "Magento-Website-Code": "base",
+          "x-api-key": "4dfa19c9fe6f4cccade55cc5b3da94f7",
+          "Magento-Environment-Id": "f38a0de0-764b-41fa-bd2c-5bc2f3c7b39a"
+        }
+      },
+      "analytics": {
+        "aep-ims-org-id": null,
+        "aep-datastream-id": null,
+        "base-currency-code": "USD",
+        "environment": "Testing",
+        "environment-id": "f38a0de0-764b-41fa-bd2c-5bc2f3c7b39a",
+        "store-code": "main_website_store",
+        "store-id": 1,
+        "store-name": "Main Website Store",
+        "store-url": "https://www.aemshop.net",
+        "store-view-code": "default",
+        "store-view-id": 1,
+        "store-view-name": "Default Store View",
+        "website-code": "base",
+        "website-id": 1,
+        "website-name": "Main Website"
+      },
+      "plugins": {
+        "picker": {
+          "rootCategory": "YOUR_ROOT_CATEGORY_ID"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none'; frame-src 'self' https:;" move-to-http-header="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduCommerce Academy</title>
+  <meta property="og:title" content="EduCommerce Academy">
+  <script nonce="aem" type="importmap">
+    {
+        "imports": {
+            "@dropins/storefront-account/": "/scripts/__dropins__/storefront-account/",
+            "@dropins/storefront-auth/": "/scripts/__dropins__/storefront-auth/",
+            "@dropins/storefront-cart/": "/scripts/__dropins__/storefront-cart/",
+            "@dropins/storefront-checkout/": "/scripts/__dropins__/storefront-checkout/",
+            "@dropins/storefront-order/": "/scripts/__dropins__/storefront-order/",
+            "@dropins/storefront-payment-services/": "/scripts/__dropins__/storefront-payment-services/",
+            "@dropins/storefront-pdp/": "/scripts/__dropins__/storefront-pdp/",
+            "@dropins/storefront-recommendations/": "/scripts/__dropins__/storefront-recommendations/",
+            "@dropins/storefront-wishlist/": "/scripts/__dropins__/storefront-wishlist/",
+            "@dropins/storefront-personalization/": "/scripts/__dropins__/storefront-personalization/",
+            "@dropins/storefront-product-discovery/": "/scripts/__dropins__/storefront-product-discovery/",
+            "@dropins/tools/": "/scripts/__dropins__/tools/"
+        }
+    }
+  </script>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script nonce="aem" type="module">
+    if (!(HTMLScriptElement.supports?.('importmap'))) {
+        import('/scripts/__dropins__/tools/shims/importmap.js');
+    }
+  </script>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <script nonce="aem" src="/scripts/commerce.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/lazy-styles.css">
+</head>
+<body>
+<header></header>
+<main>
+<div>
+<h1>Learn without limits</h1>
+<p>Live, cohort-based courses taught by industry practitioners. Small classes, real feedback, a certificate when you're done.</p>
+<p><strong><a href="/courses">Browse Courses</a></strong></p>
+</div>
+<div>
+<h2>Featured course</h2>
+<p><a href="/courses/intro-to-data-science">Intro to Data Science</a> &mdash; a 6-week live cohort starting Oct 6, 2026.</p>
+</div>
+</main>
+<footer></footer>
+</body>
+</html>
