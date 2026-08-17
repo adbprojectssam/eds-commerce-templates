@@ -13,8 +13,8 @@
  *   4. tier-features.json defaultTier
  */
 
-import { getMetadata } from './aem.js';
 import { getConfigValue } from '@dropins/tools/lib/aem/configs.js';
+import { getMetadata } from './aem.js';
 
 let featuresPromise;
 

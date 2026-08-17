@@ -1,3 +1,22 @@
+# eds-commerce-templates
+
+Multi-tier (Base/Simple/Medium/Complex), multi-vertical (retail/education/hotel-booking/fitness) storefront monorepo, per `Adobe-Commerce-EDS-Template-Architecture.md` at the parent gitrepos level. **Shared core, per-vertical overlay** layout:
+
+- `/blocks`, `/scripts`, `/styles` — shared by every vertical and tier, unmodified from Adobe's `hlxsites/aem-boilerplate-commerce` except: `scripts/tier.js` (new — tier gating) and small gating hooks added to `scripts/scripts.js`, `blocks/header/header.js`, `blocks/product-list-page/product-list-page.js`. Vertical-specific blocks (e.g. `blocks/course-detail-info`) also live here — the block loader requires flat `/blocks/{name}/{name}.js` paths, so block *code* can never live under `verticals/`.
+- `tier-features.json` — canonical, machine-readable tier feature matrix (which features unlock at which tier), consumed by `scripts/tier.js`.
+- `verticals/{name}/` — per-vertical `config.json` (Commerce endpoint + tier + vertical id), `drafts/` (authored content for local preview), and a README. Only **education** is implemented; retail/hotel-booking/fitness are stubs.
+
+At fork-per-client time (see architecture doc §3.4): copy the shared root + the one vertical's `config.json`/content into a new client repo — no code fork needed beyond that.
+
+Run a vertical locally:
+```
+npm install && npm run install:dropins
+npx @adobe/aem-cli up --html-folder verticals/education/drafts --html-mount / --port 3001
+```
+See `verticals/education/README.md` for what's real (live Commerce calls) vs. stand-in (demo SKU) in that slice, and a known local-preview limitation with header/footer fragments.
+
+---
+
 # Edge Delivery Services + Adobe Commerce Boilerplate
 
 This project boilerplate is for Edge Delivery Services projects that integrate with Adobe Commerce.
